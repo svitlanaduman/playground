@@ -1,6 +1,6 @@
 import { defineConfig, devices } from '@playwright/experimental-ct-react';
 import react from "@vitejs/plugin-react";
-
+import { resolve } from "path";
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
@@ -30,7 +30,22 @@ export default defineConfig({
 
     ctViteConfig: {
       plugins: [react()],
-    }
+      // resolve: {
+      //   alias: {
+      //     "@": resolve(__dirname, "src"),
+      //   },
+      // },   
+    
+      // build: {
+      //   rollupOptions: {
+      //     external: [
+      //       "react", // ignore react stuff
+      //       "react-dom", // ignore react stuff
+      //       "react-dom/client",
+      //     ],
+      //   },
+      // },
+      },    
   },
 
   /* Configure projects for major browsers */

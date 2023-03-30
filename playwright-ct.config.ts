@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/experimental-ct-react';
+import react from "@vitejs/plugin-react";
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -26,6 +27,10 @@ export default defineConfig({
 
     /* Port to use for Playwright component endpoint. */
     ctPort: 3100,
+
+    ctViteConfig: {
+      plugins: [react()],
+    }
   },
 
   /* Configure projects for major browsers */

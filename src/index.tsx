@@ -64,7 +64,7 @@ const client = new ApolloClient({
   link,
 })
 
-function Missions() {
+export function Missions() {
   const { data, loading, error, refetch } = useQuery<MissionsType>(
     LIST_MISSIONS,
     {

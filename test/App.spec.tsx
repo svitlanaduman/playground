@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/experimental-ct-react';
 import React from 'react';
-import {Missions} from '../src/index';
+import { Missions } from '../src/Missions';
 
 test.use({ viewport: { width: 500, height: 500 } });
 
